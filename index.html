@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Deepfake Detection</h1>
+    <p>___Upload a video to See The Truth___</p>
+
+    <!-- Drag & Drop Upload Area -->
+    <div class="upload-area" id="uploadArea">
+        <input type="file" id="videoInput" accept="video/*" hidden>
+        <div class="upload-content">
+            <i class="upload-icon">📤</i>
+            <span id="uploadText">Drag and drop or click to upload</span>
+        </div>
+    </div>
+
+    <!-- Upload Progress Bar -->
+    <div class="progress-bar" id="uploadProgressBar" hidden>
+        <div class="progress-bar-inner" id="uploadProgress"></div>
+    </div>
+    <p class="progress-text" id="uploadProgressText" hidden>Uploading...</p>
+
+    <!-- Video Preview -->
+    <div class="preview" id="preview" hidden>
+        <video id="previewVideo" controls></video>
+    </div>
+
+    <!-- Analyze Button -->
+    <button id="analyzeButton" class="analyze-btn" hidden>Analyze</button>
+
+    <!-- Analysis Progress Bar -->
+    <div class="progress-bar" id="analysisProgressBar" hidden>
+        <div class="progress-bar-inner" id="analysisProgress"></div>
+    </div>
+    <p class="progress-text" id="analysisProgressText" hidden>Analyzing...</p>
+
+    <!-- Result Section -->
+    <div id="result" class="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

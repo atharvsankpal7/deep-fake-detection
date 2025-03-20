@@ -1,0 +1,147 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://plus.unsplash.com/premium_photo-1683121713210-97667d2e83c8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(13, 13, 13, 0.7);
+    margin: 5% auto;
+    max-width: 600px;
+    min-height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Upload Area */
+.upload-area {
+    position: relative;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Effects */
+.upload-area:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    border-color: rgba(6, 197, 250, 0.8);
+    box-shadow: 0 0 20px rgba(6, 197, 250, 0.6), 0 0 40px rgba(6, 197, 250, 0.4);
+}
+
+/* Neon Glow Animation */
+@keyframes neon-glow {
+    0% { box-shadow: 0 0 10px rgba(6, 197, 250, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(6, 197, 250, 0.8), 0 0 40px rgba(6, 197, 250, 0.4); }
+    100% { box-shadow: 0 0 10px rgba(6, 197, 250, 0.6); }
+}
+.upload-area:hover {
+    animation: neon-glow 1.5s infinite alternate ease-in-out;
+}
+
+/* Video Preview */
+.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.preview video {
+    max-width: 100%;
+    max-height: 300px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Analyze Button */
+.analyze-btn {
+    background-color: #000dfd;
+    color: white;
+    border: 4px dashed #fff;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    width: 50%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.analyze-btn:hover {
+    background-color: #0afa06;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(6, 250, 26, 0.8);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 80%;
+    height: 13px;
+    background-color: rgba(232, 115, 12, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 0%;
+    background-color: #14f500;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    font-size: 1.5em;
+    margin-top: 5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .analyze-btn {
+        width: 70%;
+        font-size: 1em;
+    }
+    .upload-area {
+        padding: 30px;
+    }
+}
